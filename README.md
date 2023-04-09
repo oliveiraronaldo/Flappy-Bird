@@ -9,4 +9,5 @@ comandos para iniciar o jogo
 no terminal:
 
 npm install phaser
+
 npm run dev
