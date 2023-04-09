@@ -99,6 +99,10 @@ export default class First extends Scene{
 
 
         //escolhendo o personagem
+        this.input.keyboard.once('keydown-LEFT', () =>{
+            this.select = true;
+        })
+
         this.input.keyboard.once('keydown-M', () =>{
             this.select = true;
         })
@@ -106,7 +110,10 @@ export default class First extends Scene{
         this.input.keyboard.once('keydown-F', () =>{
             this.select = false;
         })
-        console.log(this.select);
+
+        this.input.keyboard.once('keydown-RIGHT', () =>{
+            this.select = false;
+        })
 
         if (this.select) {
             this.mascText = this.add.text(96, 340,'(M)', {color: 'red', fontSize: 18}).setOrigin(0.5, 0.5);
